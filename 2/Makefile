@@ -1,7 +1,7 @@
 all: processor receiver
 
 processor: processor.c common.h
-	gcc -o processor -lpthread -g3 processor.c
+	gcc processor.c -lpthread  -o processor 
 
 receiver: receiver.c common.h
-	gcc -o receiver -lpthread -g3 receiver.c
+	gcc receiver.c -lpthread -o receiver 
