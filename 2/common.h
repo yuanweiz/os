@@ -34,7 +34,7 @@ static inline shared_mem * get_shared_mem(int create){
             if (err<0){
                 error_msg="sem_init(writable)";break;
             }
-            err = sem_init(&ptr->readable,1,1);
+            err = sem_init(&ptr->readable,1,0);
             if (err<0){
                 error_msg="sem_init(readable)";break;
             }
