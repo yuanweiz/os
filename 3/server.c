@@ -45,6 +45,7 @@ void loop(int peerfd){
             puts("insane: message too long");
             break;
         }
+        printf("message size:%d\n",msg_len);
         sz=read(peerfd,buf,msg_len);
         if (sz <0 || sz< (int)msg_len)break;
         buf[sz]='\0';
